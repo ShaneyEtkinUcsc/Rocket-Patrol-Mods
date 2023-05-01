@@ -30,6 +30,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
         //if fired move up
         if(this.isFiring && this.y >= borderUISize * 3 + borderPadding) {
             this.y -= this.moveSpeed;
+            //DISPLAY FIRE TEXT - FOR MOD!!!
         }
         //reset on miss
         if(this.y <= borderUISize * 3 + borderPadding) {
@@ -41,5 +42,6 @@ class Rocket extends Phaser.GameObjects.Sprite {
     reset() {
         this.isFiring = false;
         this.y = game.config.height - borderUISize - borderPadding;
+        //HIDE FIRE TEXT - FOR MOD!!!
     }
 }
