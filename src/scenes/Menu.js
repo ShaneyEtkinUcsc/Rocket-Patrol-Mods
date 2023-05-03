@@ -6,13 +6,13 @@ class Menu extends Phaser.Scene {
     preload() {
         //load audio
         this.load.audio('sfx_select', './assets/assets_blip_select12.wav');
-        this.load.audio('sfx_explosion', './assets/assets_explosion38.wav');
+        //this.load.audio('sfx_explosion', './assets/assets_explosion38.wav');
         this.load.audio('sfx_rocket', './assets/assets_rocket_shot.wav');
 
-        //this.load.audio('sfx_expl_1', './assets/Explosion (sound effect).wav');
-        //this.load.audio('sfx_exp_2', './assets/hq-explosion-6288.wav');
-        //this.load.audio('sfx_exp_3', './assets/mixkit-arcade-chiptune-explosion-1691.wav');
-        //this.load.audio('sfx_exp_4', './assets/mixkit-arcade-game-explosion-2759.wav');
+        this.load.audio('sfx_exp1', './assets/Explosion (sound effect).wav');
+        this.load.audio('sfx_exp2', './assets/hq-explosion-6288.wav');
+        this.load.audio('sfx_exp3', './assets/mixkit-arcade-chiptune-explosion-1691.wav');
+        this.load.audio('sfx_exp4', './assets/mixkit-arcade-game-explosion-2759.wav');
 
         this.load.audio('background_music', './assets/103180816-ambient-chill-out-funk-evening.wav');
         this.load.image('sky', './assets/sky.png');
