@@ -38,8 +38,8 @@ class Menu extends Phaser.Scene {
         //show menu text
         menuConfig.backgroundColor = '#5424f0';
         menuConfig.color = '#ffffff';
-        //menuConfig.fontSize = '40';
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+        menuConfig.fontSize = '40px';
+        this.add.text(game.config.width/2, borderUISize + borderPadding*2, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#245af0';
         menuConfig.color = '#ffffff';
         this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
