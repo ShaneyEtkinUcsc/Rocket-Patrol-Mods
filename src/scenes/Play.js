@@ -9,7 +9,7 @@ class Play extends Phaser.Scene {
         //this.load.image('spaceship', './assets/spaceship.png');
         this.load.atlas('spaceshipanim', './assets/spaceshipanim.png', './assets/spaceshipanim.json');
 
-        
+        /*
         this.load.image('spaceshipanim1', './assets/spaceshipanim1.png');
         this.load.image('spaceshipanim2', './assets/spaceshipanim2.png');
         this.load.image('spaceshipanim3', './assets/spaceshipanim3.png');
@@ -19,7 +19,7 @@ class Play extends Phaser.Scene {
         this.load.image('spaceshipanim7', './assets/spaceshipanim7.png');
         this.load.image('spaceshipanim8', './assets/spaceshipanim8.png');
         this.load.image('spaceshipanim9', './assets/spaceshipanim9.png');
-        
+        */
 
         this.load.image('nightsky', './assets/nightsky.png');
         this.load.image('clouds', './assets/clouds.png');
@@ -43,29 +43,6 @@ class Play extends Phaser.Scene {
         this.add.rectangle(0, game.config.height - borderUISize, game.config.width, borderUISize, 0xFFFFFF).setOrigin(0, 0);
         this.add.rectangle(0, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
         this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
-
-        //add rocket p1
-        this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
-
-        //add spaceships (x3)
-        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceshipanim', 0, 30).setOrigin(0, 0).play('fly');
-        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceshipanim', 0, 20).setOrigin(0, 0).play('fly');
-        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceshipanim', 0, 10).setOrigin(0, 0).play('fly');
-
-        this.ship04 = new Smallship(this, game.config.width + borderUISize*6, borderUISize*4, 'smallship', 0, 40).setOrigin(0, 0);
-
-        //define keys
-        keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
-        keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
-        keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-        keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-
-        //animation config
-        this.anims.create({
-            key: 'explode',
-            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
-            frameRate: 30
-        });
 
         //https://www.youtube.com/watch?v=ffemDAdJySU
         
@@ -105,6 +82,29 @@ class Play extends Phaser.Scene {
             repeat: -1
         });
         */
+
+        //add rocket p1
+        this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
+
+        //add spaceships (x3)
+        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceshipanim', 0, 30).setOrigin(0, 0).play('fly');
+        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceshipanim', 0, 20).setOrigin(0, 0).play('fly');
+        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceshipanim', 0, 10).setOrigin(0, 0).play('fly');
+
+        this.ship04 = new Smallship(this, game.config.width + borderUISize*6, borderUISize*4, 'smallship', 0, 40).setOrigin(0, 0);
+
+        //define keys
+        keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
+        keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+        keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
+        keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+
+        //animation config
+        this.anims.create({
+            key: 'explode',
+            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
+            frameRate: 30
+        });
 
         //initialize score
         this.p1Score = 0;
