@@ -7,6 +7,7 @@ class Play extends Phaser.Scene {
         //load sprites and images
         this.load.image('rocket', './assets/rocket.png');
         this.load.image('spaceship', './assets/spaceship.png');
+        //this.load.atlas('spaceship', './assets/spaceshipanim.png', './assets/spaceshipanim.json');
         this.load.image('nightsky', './assets/nightsky.png');
 
         this.load.image('clouds', './assets/clouds.png');
@@ -34,9 +35,9 @@ class Play extends Phaser.Scene {
         this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
 
         //add spaceships (x3)
-        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 30).setOrigin(0, 0);
-        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceship', 0, 20).setOrigin(0, 0);
-        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceship', 0, 10).setOrigin(0, 0);
+        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 30).setOrigin(0, 0); //.play(fly);
+        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceship', 0, 20).setOrigin(0, 0); //.play(fly);
+        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceship', 0, 10).setOrigin(0, 0); //.play(fly);
 
         this.ship04 = new Smallship(this, game.config.width + borderUISize*6, borderUISize*4, 'smallship', 0, 40).setOrigin(0, 0);
 
@@ -52,6 +53,15 @@ class Play extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
             frameRate: 30
         });
+
+        //this.anims.create({
+        //    key: 'fly',
+        //    frames: this.anims.generateFrameNames('spaceshipanim', {
+        //        start: 1,
+        //        end: 9,
+        //        first: 1
+        //    })
+        //})
 
         //initialize score
         this.p1Score = 0;
