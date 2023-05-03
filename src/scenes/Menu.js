@@ -4,9 +4,11 @@ Rocket Patrol Mods (aka super chill remix rocket patrol)
 Took about 18hrs (including new art)
 5 pts - new scrolling tilesprite
 5 pts - add background music to play scene
+5 pts - Rocket moves while firing
 10 pts - randomize 4 new explosions sounds 
 10 pts - Display time remaining in sec
 10 pts - Create new title screen
+10 pts - Parallax background implemented
 15 pts - Create new enemy spaceship type (smaller, faster, more pts)
 citations:
 https://www.joshmorony.com/adding-custom-fonts-to-your-phaser-game/ - i didn't end up doing it this way, but I used this guy a lot, also looked at his parallax and json animation pages

@@ -31,7 +31,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
         if(this.isFiring && this.y >= borderUISize * 3 + borderPadding) {
             this.y -= this.moveSpeed;
             //DISPLAY FIRE TEXT - FOR MOD!!!
-            /*
+            
             let fireConfig = {
                 fontFamily: 'Courier',
                 fontSize: '28px',
@@ -45,7 +45,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
                 fixedWidth: 100
             }
             this.add.text(game.config.width/2, borderUISize + borderPadding*2, 'FIRE', fireConfig);
-            */
+            
         }
         //reset on miss
         if(this.y <= borderUISize * 3 + borderPadding) {
