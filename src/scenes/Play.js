@@ -90,6 +90,8 @@ class Play extends Phaser.Scene {
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or <- for Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
         }, null, this);
+
+        this.playTimer = this.add.text(borderUISize + borderPadding, borderUISize + borderPadding*2, this.clock, scoreConfig);
     }
 
     update() {
@@ -103,6 +105,9 @@ class Play extends Phaser.Scene {
 
         this.starfield.tilePositionX -= 4;
         this.clouds.tilePositionX -= 2;
+
+        //to get remaining time in clock
+        this.playTimer.text = Math.floor((this.clock.getRemaining()/1000));
 
         if(!this.gameOver) {
             this.p1Rocket.update();
