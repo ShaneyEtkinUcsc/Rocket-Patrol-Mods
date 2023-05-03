@@ -6,17 +6,14 @@ class Play extends Phaser.Scene {
     preload() {
         //load sprites and images
         this.load.image('rocket', './assets/rocket.png');
-        this.load.atlas('spaceship', './assets/spaceshipanim.json'); //not sure if this is right - I'll have to edit the animation stuff too but this i think is the preload
-        this.load.image('sky', './assets/sky.png');
+        this.load.image('spaceship', './assets/spaceship.png');
+        this.load.image('nightsky', './assets/nightsky.png');
         //load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
     }
 
     create() {
-        this.sky = this.add.tileSprite(0, 0, 640, 480, 'sky').setOrigin(0, 0);
-        
-        //PLAY BACKGROUND MUSIC
-        //this.sound.play(background_music); CHECK THAT THIS IS RIGHT
+        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'nightsky').setOrigin(0, 0);
 
         //make background greeen
         this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0x00FF00).setOrigin(0, 0);
@@ -74,21 +71,6 @@ class Play extends Phaser.Scene {
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or <- for Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
         }, null, this);
-
-        //TIMER UI TEXT HERE this.add.text()
-        //let timerConfig = {
-        //    fontFamily: 'Courier',
-        //    fontSize: '28px',
-        //    backgroundColor: '#F3B141',
-        //    color: '#843605',
-        //    align: 'left', //not sure if this does anything
-        //    padding: {
-        //        top: 5,
-        //        bottom: 5,
-        //    },
-        //    fixedWidth: 100
-        //}
-        //this.clock = this.add.text(borderUISize + borderPadding, borderUISize + borderPadding*2, this.clock, timerConfig); //will probably have to edit this to move text
     }
 
     update() {
@@ -150,6 +132,6 @@ class Play extends Phaser.Scene {
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;      
 
-        this.sound.play('sfx_explosion'); //RANDOM EXPLOSIONS MOD HERE INSTEAD OF THIS, RANDOMIZE ONE OF FOUR
+        this.sound.play('sfx_explosion');
     }
 }
