@@ -31,6 +31,21 @@ class Rocket extends Phaser.GameObjects.Sprite {
         if(this.isFiring && this.y >= borderUISize * 3 + borderPadding) {
             this.y -= this.moveSpeed;
             //DISPLAY FIRE TEXT - FOR MOD!!!
+            /*
+            let fireConfig = {
+                fontFamily: 'Courier',
+                fontSize: '28px',
+                backgroundColor: '#2491f0',
+                color: '#ffffff',
+                align: 'right',
+                padding: {
+                    top: 5,
+                    bottom: 5,
+                },
+                fixedWidth: 100
+            }
+            this.add.text(game.config.width/2, borderUISize + borderPadding*2, 'FIRE', fireConfig);
+            */
         }
         //reset on miss
         if(this.y <= borderUISize * 3 + borderPadding) {
