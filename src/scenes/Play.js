@@ -102,6 +102,7 @@ class Play extends Phaser.Scene {
             this.gameOver = true;
         }, null, this);
 
+        //show UI text for play timer
         this.playTimer = this.add.text(game.config.width/2, borderUISize + borderPadding*2, this.clock, scoreConfig);
     }
 
@@ -118,6 +119,7 @@ class Play extends Phaser.Scene {
         this.clouds.tilePositionX -= 2;
 
         //to get remaining time in clock
+        //https://newdocs.phaser.io/docs/3.55.2/focus/Phaser.Time.TimerEvent-getRemaining
         this.playTimer.text = Math.floor((this.clock.getRemaining()/1000));
 
         if(!this.gameOver) {
