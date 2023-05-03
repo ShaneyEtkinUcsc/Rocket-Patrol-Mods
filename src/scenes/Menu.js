@@ -14,7 +14,7 @@ class Menu extends Phaser.Scene {
         //this.load.audio('sfx_exp_3', './assets/mixkit-arcade-chiptune-explosion-1691.wav');
         //this.load.audio('sfx_exp_4', './assets/mixkit-arcade-game-explosion-2759.wav');
 
-        //this.load.audio('background_music', './assets/103180816-ambient-chill-out-funk-evening.wav');
+        this.load.audio('background_music', './assets/103180816-ambient-chill-out-funk-evening.wav');
         this.load.image('sky', './assets/sky.png');
     }
 

@@ -13,6 +13,7 @@ class Play extends Phaser.Scene {
     }
 
     create() {
+        this.sound.play('background_music');
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'nightsky').setOrigin(0, 0);
 
         //make background greeen
