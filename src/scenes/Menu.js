@@ -19,14 +19,14 @@ class Menu extends Phaser.Scene {
     }
 
     create() {
-        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'sky').setOrigin(0, 0);
+        this.sky = this.add.tileSprite(0, 0, 640, 480, 'sky').setOrigin(0, 0);
 
         //menu text config
         let menuConfig = {
             fontFamily: 'Courier', //CHANGE FONT
             fontSize: '28px', //CHANGE SIZE
             backgroundColor: '#F3B141',
-            color: '#843605',
+            color: '#4103fc',
             align: 'right', //CHANGE THIS
             padding: {
                 top: 5,
