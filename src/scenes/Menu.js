@@ -9,6 +9,7 @@ Took about 18hrs (including new art)
 10 pts - Display time remaining in sec
 10 pts - Create new title screen
 10 pts - Parallax background implemented
+10 pts - Texture atlas spaceship animation
 15 pts - Create new enemy spaceship type (smaller, faster, more pts)
 citations:
 https://www.joshmorony.com/adding-custom-fonts-to-your-phaser-game/ - i didn't end up doing it this way, but I used this guy a lot, also looked at his parallax and json animation pages

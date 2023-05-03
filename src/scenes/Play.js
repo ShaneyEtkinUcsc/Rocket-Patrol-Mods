@@ -45,7 +45,6 @@ class Play extends Phaser.Scene {
         this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
 
         //https://www.youtube.com/watch?v=ffemDAdJySU
-        
         this.frameNames = this.textures.get('spaceshipanim').getFrameNames();
         this.anims.create({
             key: 'fly',
