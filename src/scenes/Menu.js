@@ -15,9 +15,12 @@ class Menu extends Phaser.Scene {
         //this.load.audio('sfx_exp_4', './assets/mixkit-arcade-game-explosion-2759.wav');
 
         //this.load.audio('background_music', './assets/103180816-ambient-chill-out-funk-evening.wav');
+        this.load.image('sky', './assets/sky.png');
     }
 
     create() {
+        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'sky').setOrigin(0, 0);
+
         //menu text config
         let menuConfig = {
             fontFamily: 'Courier', //CHANGE FONT
