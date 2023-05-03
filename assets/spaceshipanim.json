@@ -1,1 +1,209 @@
-[{"name":"spaceshipanim3","x":0,"y":0,"width":63,"height":32},{"name":"spaceshipanim4","x":0,"y":33,"width":63,"height":32},{"name":"spaceshipanim5","x":0,"y":66,"width":63,"height":32},{"name":"spaceshipanim6","x":64,"y":0,"width":63,"height":32},{"name":"spaceshipanim7","x":64,"y":33,"width":63,"height":32},{"name":"spaceshipanim8","x":64,"y":66,"width":63,"height":32},{"name":"spaceshipanim9","x":0,"y":99,"width":63,"height":32},{"name":"spaceshipanim1","x":64,"y":99,"width":63,"height":32},{"name":"spaceshipanim2","x":0,"y":132,"width":63,"height":32}]
+{
+	"textures": [
+		{
+			"image": "spaceshipanim.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 195,
+				"h": 102
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "spaceshipanim1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 35,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 69,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 66,
+						"y": 1,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 66,
+						"y": 35,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 66,
+						"y": 69,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 131,
+						"y": 1,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 131,
+						"y": 35,
+						"w": 63,
+						"h": 32
+					}
+				},
+				{
+					"filename": "spaceshipanim9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 32
+					},
+					"frame": {
+						"x": 131,
+						"y": 69,
+						"w": 63,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c82e2dc6ed365200cf7e9baf311e0e56:4204349545138dabfc15b4c0eb5e481c:778d860431e5c96f161f1cdc10b91be7$"
+	}
+}

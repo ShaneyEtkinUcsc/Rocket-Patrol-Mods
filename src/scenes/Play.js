@@ -55,7 +55,7 @@ class Play extends Phaser.Scene {
         });
 
         //https://www.youtube.com/watch?v=ffemDAdJySU
-        this.textures.get('spaceshipanim').getFrameNames();
+        this.frameNames = this.textures.get('spaceshipanim').getFrameNames();
         this.anims.create({
             key: 'fly',
             frames: [
@@ -67,7 +67,7 @@ class Play extends Phaser.Scene {
                 {key: 'spaceshipanim', frame: "spaceshipanim6.png" },
                 {key: 'spaceshipanim', frame: "spaceshipanim7.png" },
                 {key: 'spaceshipanim', frame: "spaceshipanim8.png" },
-                {key: 'spaceshipanim', frame: "spaceshipanim9.png" },
+                {key: 'spaceshipanim', frame: "spaceshipanim9.png" }
             ], 
             frameRate: 10,
             repeat: -1
