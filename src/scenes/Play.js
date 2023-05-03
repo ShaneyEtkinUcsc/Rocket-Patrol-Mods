@@ -6,8 +6,8 @@ class Play extends Phaser.Scene {
     preload() {
         //load sprites and images
         this.load.image('rocket', './assets/rocket.png');
-        //this.load.image('spaceship', './assets/spaceship.png');
-        this.load.atlas('spaceshipanim', './assets/spaceshipanim.png', './assets/spaceshipanim.json');
+        this.load.image('spaceship', './assets/spaceship.png');
+        //this.load.atlas('spaceshipanim', './assets/spaceshipanim.png', './assets/spaceshipanim.json');
         this.load.image('nightsky', './assets/nightsky.png');
 
         this.load.image('clouds', './assets/clouds.png');
@@ -35,9 +35,9 @@ class Play extends Phaser.Scene {
         this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
 
         //add spaceships (x3)
-        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceshipanim', 0, 30).setOrigin(0, 0).play(fly);
-        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceshipanim', 0, 20).setOrigin(0, 0).play(fly);
-        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceshipanim', 0, 10).setOrigin(0, 0).play(fly);
+        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceshipanim', 0, 30).setOrigin(0, 0);//.play(fly);
+        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'spaceshipanim', 0, 20).setOrigin(0, 0);//.play(fly);
+        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'spaceshipanim', 0, 10).setOrigin(0, 0);//.play(fly);
 
         this.ship04 = new Smallship(this, game.config.width + borderUISize*6, borderUISize*4, 'smallship', 0, 40).setOrigin(0, 0);
 
@@ -55,6 +55,7 @@ class Play extends Phaser.Scene {
         });
 
         //https://www.youtube.com/watch?v=ffemDAdJySU
+        /*
         this.anims.create({
             key: 'fly',
             frames: [
@@ -71,6 +72,7 @@ class Play extends Phaser.Scene {
             frameRate: 10,
             repeat: -1
         });
+        */
 
         //initialize score
         this.p1Score = 0;
