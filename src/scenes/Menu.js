@@ -1,3 +1,22 @@
+/*
+Shaney Etkin
+Rocket Patrol Mods (aka super chill remix rocket patrol)
+Took about 18hrs (including new art)
+5 pts - new scrolling tilesprite
+5 pts - add background music to play scene
+10 pts - randomize 4 new explosions sounds 
+10 pts - Display time remaining in sec
+10 pts - Create new title screen
+15 pts - Create new enemy spaceship type (smaller, faster, more pts)
+citations:
+https://www.joshmorony.com/adding-custom-fonts-to-your-phaser-game/ - i didn't end up doing it this way, but I used this guy a lot, also looked at his parallax and json animation pages
+https://www.youtube.com/watch?v=ffemDAdJySU
+https://www.thepolyglotdeveloper.com/2020/08/animate-compressed-sprite-atlas-phaser-game/
+https://phaser.discourse.group/t/loading-oft-and-ttf-files-in-phaser3/3204/3
+https://gist.github.com/thosakwe/bade2c36c81f41b4a17e6482797dd598 - didn't end up using this
+lots of phaser documentation for math functions etc!
+*/
+
 class Menu extends Phaser.Scene {
     constructor() {
         super("menuScene");
@@ -24,7 +43,7 @@ class Menu extends Phaser.Scene {
 
         //menu text config
         let menuConfig = {
-            fontFamily: 'Pacifico',
+            fontFamily: 'GreatVibes',
             fontSize: '28px',
             color: '#843605',
             align: 'right',
@@ -36,11 +55,12 @@ class Menu extends Phaser.Scene {
         }
 
         //show menu text
+        menuConfig.fontSize = '40px';
         menuConfig.color = '#5424f0';
         this.add.text(game.config.width/2, borderUISize + borderPadding*2, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
-        menuConfig.fontSize = '40px';
-        menuConfig.fontFamily = 'GreatVibes';
-        menuConfig.color = '#000';
+        menuConfig.fontSize = '28px';
+        menuConfig.fontFamily = 'Pacifico';
+        menuConfig.color = '#2a00b3';
         this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
 
