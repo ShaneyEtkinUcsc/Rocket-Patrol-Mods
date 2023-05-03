@@ -92,6 +92,7 @@ class Play extends Phaser.Scene {
         }
 
         this.starfield.tilePositionX -= 4;
+        this.clouds.tilePositionX -= 2;
 
         if(!this.gameOver) {
             this.p1Rocket.update();
