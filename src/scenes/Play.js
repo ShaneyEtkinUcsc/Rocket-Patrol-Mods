@@ -142,6 +142,8 @@ class Play extends Phaser.Scene {
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;      
 
+        //I was going to create an array, push each explosion sound to the array, and use math.random to play a random sound
+        //it worked, but took a lot of code - Anna Schult showed me a way to do it with less code so I used that instead :)
         this.sound.play("sfx_exp" + Phaser.Math.Between(1, 4));
     }
 }
